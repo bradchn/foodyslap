@@ -1,0 +1,272 @@
+.main_box{
+	width: 700px;
+	height: 400px;
+	margin: auto;
+	position: relative;
+}
+
+.cards{
+	position: absolute; 
+	top: 0; 
+	left: 0;
+}
+
+.container{
+	display: none;
+}
+
+#credits{
+	color: gray;
+	font-style: italic;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+.restaurant{
+	padding: 10px;
+	position: absolute;
+}
+
+.leftCol {
+	position: relative;
+	display: block;
+	float: left;
+	width: 400px;
+}
+
+.footer{
+	padding: 10px;
+	text-align: center;
+	color: black;
+}
+
+#template_card{
+	background: white;
+	width: 670px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.instructions{
+	text-align: center;
+	color: black;
+	font-weight: 700;
+
+}
+
+#instructions{
+	font-style: italic;
+	font-size: 20px;
+	font-color: gray;
+}
+
+.black_overlay{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+
+.white_content {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 16px;
+    border-width: 16px;
+    border-style: solid;
+    border-color: #ff7d41;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+
+#light2 {
+	text-align: center;
+	height: 450px;
+}
+
+.card_class{   
+	position: absolute;
+	width: 670px;
+	height: 400px;
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-style: double;
+    padding-right: 0px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+
+#main{
+	width: 650px;
+	height: 350px;
+	background:black;
+}
+
+#right{
+	width: 250px;
+	height:350px;
+	float: left;
+	text-align: left;
+    background: #fbd7dc;
+}
+
+#left{
+	width: 400px;
+	height: 350px;
+	float: left;
+	text-align: left;
+}
+
+h3{
+	text-align: left;
+	color: white;
+	font-size: 33px;
+	font-weight: 400;
+	background-color: #f2c973;
+	width: 100%;
+    height: 125px;
+    margin: 0px;
+    padding-left: 4px;
+}
+
+#categories{
+	font-weight: 300;
+	text-align: left;
+	font-style: italic;
+	color: white;
+	/*font-size: 30px;*/
+	background-color: #e97166;
+	width: 100%;
+	height: 74px;
+	margin:0px;
+	margin-right: 0px;
+	padding-left: 4px;
+}
+
+#opening{
+	/*font-size: 40px;*/
+	text-align: left;
+	font-weight: 300;
+	color: white;
+	background-color: #53c5c1;
+	width: 100%;
+	height:47px;
+	margin:0px;
+	margin-right: 0px;
+	padding-left: 4px;
+}
+
+#address{
+	/*font-size: 20px;*/
+	text-align: left;
+	font-weight: 300;
+	color: black;
+	background-color: #acf597;
+	width: 100%;
+	height:57px;
+	margin:0px;
+	margin-right: 0px;
+	padding-left: 4px;
+}
+
+#phone{
+	/*font-size: 20px;*/
+	text-align: left;
+	font-weight: 300;
+	color: white;
+	background-color: #656567;
+	width: 100%;
+	height:47px;
+	margin:0px;
+	margin-right: 0px;
+	padding-left: 4px;
+}
+
+#rating{
+	font-weight: 400;
+	line-height: 80%;
+	font-size: 90px;
+	height: 40px;
+	text-align: right;
+	margin-left:0px;
+	color: white;
+	width: 100%;
+	height: 100%;
+	/*overflow: scroll;*/
+}
+.rightCol {
+	display: block;
+	width: 250px;
+	height: 350px;
+	float: left;
+	background-color: #fbd7dc;
+}
+
+.animateRight {
+	transform: translateX(100%);
+	opacity: 0;
+	-webkit-transition: transform 1s, opacity 0.6s; /* For Safari 3.1 to 6.0 */
+    transition: transform 1s, opacity 0.6s;
+}
+
+.animateLeft {
+	transform: translateX(-100%);
+	opacity: 0;
+	-webkit-transition: transform 1s, opacity 0.6s; /* For Safari 3.1 to 6.0 */
+    transition: transform 1s, opacity 0.6s;
+}
+
+.thumbnailInst {
+	margin: 3px;
+	width: 30%;
+}
+
+.actionButton {
+	text-align: center;
+	cursor: pointer;
+	height: 30px;
+	padding: 8px;
+}
+
+.openButton {
+	color: green;
+	float: right;
+}
+
+.dismissButton {
+	float: right;
+}
+
+.reloadButton {
+	float: left;
+}
+
+.innerCard {
+	display: block;
+	float: left;
+	height: 380px;
+	position: relative;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foody Slap</title>
+    <link href ="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://js.leapmotion.com/leap-0.6.2.js"></script>
+    <script src="http://js.leapmotion.com/leap-plugins-0.1.7.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/restaurantcards.js"></script>
+    <script src="js/gestureLib.js"></script>
+    <script src="js/foodyslap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- for mobile -->
+
+  </head>
+  <body background ="img/background.jpg" onload="home_on_load()" style="overflow: hidden;">
+    <div class="container">
+      <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='block';document.getElementById('fade').style.display='block'">
+      <div style="text-align:center"><img src="img/banner.png" width="660" onload="resize_text()"></div></a>
+      </br>
+
+      <div id="light2" class="white_content"> <h4>What inspired the creation of Foody Slap?</h4><iframe width="420" height="315" src="//www.youtube.com/embed/9VIXHrA6Cao?rel=0" frameborder="0" allowfullscreen></iframe><br/>
+          <a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+        </div>
+
+      <div class="main_box" id="cards_container">
+
+        <div id="template_card" onload="populate_variables()">
+          <div class='innerCard'>
+            <img src="img/finalcard.jpg">
+          </div>
+        </div>
+
+      </div>
+      <br/>
+
+      <div class="instructions">
+        <p id="instructions">
+          <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">I'm confused, what do I do?</a>
+        </p>
+
+        <div id="light" class="white_content"> <h4>Slap food choices you don't want!</h4>Swipe your hand over leap device through restaurants until you find one that you want to eat at. Use your hands to zoom in to view restaurant menu. 
+          </br></br>
+          <div style="width: 100%">
+            <img class="thumbnailInst" src="img/inst1.JPG"><img class="thumbnailInst" src="img/inst2.JPG"><img class="thumbnailInst" src="img/inst3.JPG">
+          </div>
+          <br/>
+          <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+        </div>
+
+        <div id="fade" class="black_overlay"></div>
+      </div>
+      
+    </div>
+    <div class="footer">
+
+      <p>Hack the North 2014</p>
+      <p id="credits"> Brought to you by Leap Motion and the Yelp API. </p>
+
+
+    </div>
+  </body>
+</html>

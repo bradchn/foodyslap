@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(getPosition);
+                } 
+                else { 
+                    return "Geolocation is not supported by this browser.";
+                }
+            }
+            function getPosition(position) {
+                var lat = position.coords.latitude;
+                var longit = position.coords.longitude;
+                var api = 'http://api.yelp.com/v2/search?term=food&sort=1&radius_filter=32000cll='+"lat"+"','"+"longit";
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET","foodThing.php?longit="+longit+"&latit="+lat,true)
+                xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                xmlhttp.onreadystatechange=function(){
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                        {
+                            var results =  JSON.parse(xmlhttp.responseText); 
+                            document.getElementById("restName").innerHTML = results.businesses[0].name;
+                            document.getElementById("rating").innerHTML = results.businesses[0].rating;
+                            document.getElementById("categories").innerHTML = results.businesses[0].categories;
+                            document.getElementById("address").innerHTML = results.businesses[0].display_address;
+                        }
+                }
+                xmlhttp.send();
+            }
+        </script>
+    </head>
+    <body onload = "getLocation()">
+        <p> Hi</p>
+        <div id="restName"></div>
+        <div id="rating"></div>
+        <div id="categories"></div>
+        <div id="address"></div>
+
+    </body>
+</html>

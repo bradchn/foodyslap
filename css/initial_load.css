@@ -1,0 +1,19 @@
+body{
+	background-color: black;
+}
+.main_box{
+	padding-top: 70px;
+	width: 600px;
+	height: 500px;
+	margin: auto;
+}
+
+.initial_text{
+	color: gray;
+	text-align: center;
+}
+
+#content-wrapper
+{
+	display:none;	
+}
