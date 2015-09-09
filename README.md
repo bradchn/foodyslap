@@ -1,3 +1,3 @@
 # FoodySlap
-Tinder for restaurants
-Uses Yelp API.
+Tinder for restaurants,
+uses Yelp API.
